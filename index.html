@@ -1,263 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shortcuts</title>
-    <link rel="stylesheet" href="https://bootswatch.com/5/quartz/bootstrap.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/quartz/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="container mt-4" id="utecWrapper">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <div class="card-header"><i class="fa fa-desktop"></i>&nbsp;&nbsp;Admin Panel</div>
-                    <div class="card-body">
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-dark" id="adminTest">Test</button>
-                            <button class="btn btn-dark" id="adminStage">Stage</button>
-                            <button class="btn btn-dark" id="adminPreprod">Preprod</button>
-                            <button class="btn btn-dark" id="adminProd">Prod</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div>
+            <h4>IFA</h4>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter ID"
+                id="jiraInputIFA"
+                maxlength="4"
+              />
+              <button class="btn btn-success" type="button" id="jiraButtonIFA">
+                Open
+              </button>
             </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <div class="card-header"><i class="fa fa-globe"></i>&nbsp;&nbsp;One Technical</div>
-                    <div class="card-body">
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-dark" id="polarisTest">Test</button>
-                            <button class="btn btn-dark" id="polarisStage">Stage</button>
-                            <button class="btn btn-dark" id="polarisPreprod">Preprod</button>
-                            <button class="btn btn-dark" id="polarisProd">Prod</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <div class="card-header"><i class="fa fa-phone"></i>&nbsp;&nbsp;Contact Center Panel</div>
-                    <div class="card-body">
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-dark" id="CCPTest">Test</button>
-                            <button class="btn btn-dark" id="CCPStage">Stage</button>
-                            <button class="btn btn-dark" id="CCPPreprod">Preprod</button>
-                            <button class="btn btn-dark" id="CCPProd">Prod</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <div class="card-header"><i class="fa fa-qrcode"></i>&nbsp;&nbsp;BPD</div>
-                    <div class="card-body">
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-dark" id="BPDTest" disabled>Test</button>
-                            <button class="btn btn-dark" id="BPDStage">Stage</button>
-                            <button class="btn btn-dark" id="BPDPreprod">Preprod</button>
-                            <button class="btn btn-dark" id="BPDProd">Prod</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card mb-3">
-                    <div class="card-header"><i class="fa fa-bitbucket"></i>&nbsp;&nbsp;Bitbucket Repos</div>
-                    <div class="card-body">
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-dark" id="bitbucketAdmin">Admin</button>
-                            <button class="btn btn-dark" id="bitbucketPolaris">One Technical</button>
-                            <button class="btn btn-dark" id="bitbucketCCP">Contact Center Panel</button>
-                            <button class="btn btn-dark" id="bitbucketBPD">BPD</button>
-                            <button class="btn btn-dark" id="bitbucketMicroservices">Microservices</button>
-                            <button class="btn btn-dark" id="bitbucketPolarisBE">Polaris-BE</button>
-                            <button class="btn btn-dark" id="bitbucketReferral">Referral</button>
-                            <button class="btn btn-dark" id="bitbucketBpdBE">BPD-BE</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div>
-                    <h4>IFA</h4>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enter ID" id="jiraInputIFA" maxlength="4">
-                        <button class="btn btn-success" type="button" id="jiraButtonIFA">Open</button>
-                    </div>
-                </div>
-                <div>
-                    <h4>UTS</h4>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enter ID" id="jiraInputUTS" maxlength="4">
-                        <button class="btn btn-success" type="button" id="jiraButtonUTS">Open</button>
-                    </div>
-                </div>
-                <div>
-                    <h4>EA</h4>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enter ID" id="jiraInputEA" maxlength="4">
-                        <button class="btn btn-success" type="button" id="jiraButtonEA">Open</button>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <div class="col-md-3">
+          <div>
+            <h4>UTS</h4>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter ID"
+                id="jiraInputUTS"
+                maxlength="4"
+              />
+              <button class="btn btn-success" type="button" id="jiraButtonUTS">
+                Open
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <h4>EA</h4>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter ID"
+                id="jiraInputEA"
+                maxlength="4"
+              />
+              <button class="btn btn-success" type="button" id="jiraButtonEA">
+                Open
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-desktop"></i>&nbsp;&nbsp;Admin Panel
+            </div>
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark" id="adminTest">Test</button>
+                <button class="btn btn-dark" id="adminStage">Stage</button>
+                <button class="btn btn-dark" id="adminPreprod">Preprod</button>
+                <button class="btn btn-dark" id="adminProd">Prod</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-globe"></i>&nbsp;&nbsp;One Technical
+            </div>
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark" id="polarisTest">Test</button>
+                <button class="btn btn-dark" id="polarisStage">Stage</button>
+                <button class="btn btn-dark" id="polarisPreprod">
+                  Preprod
+                </button>
+                <button class="btn btn-dark" id="polarisProd">Prod</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-phone"></i>&nbsp;&nbsp;Contact Center Panel
+            </div>
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark" id="CCPTest">Test</button>
+                <button class="btn btn-dark" id="CCPStage">Stage</button>
+                <button class="btn btn-dark" id="CCPPreprod">Preprod</button>
+                <button class="btn btn-dark" id="CCPProd">Prod</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-qrcode"></i>&nbsp;&nbsp;BPD
+            </div>
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark" id="BPDTest" disabled>Test</button>
+                <button class="btn btn-dark" id="BPDStage">Stage</button>
+                <button class="btn btn-dark" id="BPDPreprod">Preprod</button>
+                <button class="btn btn-dark" id="BPDProd">Prod</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bitbucket"></i>&nbsp;&nbsp;FE Repos
+            </div>
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark" id="bitbucketAdmin">Admin</button>
+                <button class="btn btn-dark" id="bitbucketPolaris">
+                  One Technical
+                </button>
+                <button class="btn btn-dark" id="bitbucketCCP">
+                  Contact Center Panel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bitbucket"></i>&nbsp;&nbsp;BE Repos
+            </div>
+            <div class="card-body">
+              <div class="d-grid gap-2">
+                <button class="btn btn-dark" id="bitbucketBPD">BPD</button>
+                <button class="btn btn-dark" id="bitbucketMicroservices">
+                  Microservices
+                </button>
+                <button class="btn btn-dark" id="bitbucketPolarisBE">
+                  Polaris-BE
+                </button>
+                <button class="btn btn-dark" id="bitbucketReferral">
+                  Referral
+                </button>
+                <button class="btn btn-dark" id="bitbucketBpdBE">BPD-BE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
-        const wrapper = document.getElementById('utecWrapper');
-        wrapper.addEventListener('click', (event) => {
-            const isButton = event.target.nodeName === 'BUTTON';
-            if (!isButton) {
-                return;
+      const wrapper = document.getElementById("utecWrapper");
+      wrapper.addEventListener("click", (event) => {
+        const isButton = event.target.nodeName === "BUTTON";
+        if (!isButton) {
+          return;
+        }
+        let id = event.target.id;
+        switch (id) {
+          case "adminTest":
+            window.open("https://test-admin.utecstage.com/", "_blank").focus();
+            break;
+          case "adminStage":
+            window.open("https://admin.utecstage.com/", "_blank").focus();
+            break;
+          case "adminPreprod":
+            window
+              .open("https://admin-preprod.utecstage.com/", "_blank")
+              .focus();
+            break;
+          case "adminProd":
+            window.open("https://admin.utecbuild.com/", "_blank").focus();
+            break;
+          case "polarisTest":
+            window
+              .open("https://d1e6yiez0hqgz1.cloudfront.net/", "_blank")
+              .focus();
+            break;
+          case "polarisStage":
+            window
+              .open("https://onetechnical.utecstage.com/", "_blank")
+              .focus();
+            break;
+          case "polarisPreprod":
+            window
+              .open("https://onetechnical-preprod.utecstage.com/", "_blank")
+              .focus();
+            break;
+          case "polarisProd":
+            window
+              .open("https://onetechnical.utecbuild.com/", "_blank")
+              .focus();
+            break;
+          case "CCPTest":
+            window
+              .open("https://d3hltqg7xurqp6.cloudfront.net/", "_blank")
+              .focus();
+            break;
+          case "CCPStage":
+            window.open("https://experience.utecstage.com/", "_blank").focus();
+            break;
+          case "CCPPreprod":
+            window.open("https://cx-preprod.utecstage.com/", "_blank").focus();
+            break;
+          case "CCPProd":
+            window.open("https://experience.utecbuild.com/", "_blank").focus();
+            break;
+          case "BPDTest":
+            // window.open('https://d3hltqg7xurqp6.cloudfront.net/', '_blank').focus();
+            break;
+          case "BPDStage":
+            window.open("https://bpdloyalty.utecstage.com/", "_blank").focus();
+            break;
+          case "BPDPreprod":
+            window
+              .open("https://dfoh5qngxb25s.cloudfront.net/", "_blank")
+              .focus();
+            break;
+          case "BPDProd":
+            window.open("https://bpdloyalty.utecbuild.com/", "_blank").focus();
+            break;
+          case "bitbucketAdmin":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/admin-panel/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+          case "bitbucketPolaris":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/polaris/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+          case "bitbucketCCP":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/contact-center-panel/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+          case "bitbucketBPD":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/bpd-qrc-frontend/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+          case "bitbucketMicroservices":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/utec-microservices/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+          case "bitbucketPolarisBE":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/polaris-backend/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+          case "bitbucketReferral":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/referral-system/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+          case "bitbucketBpdBE":
+            window
+              .open(
+                "https://bitbucket.org/utecdev/bpd-qrc-backend/src/master/",
+                "_blank"
+              )
+              .focus();
+            break;
+
+          case "jiraButtonIFA":
+            let elemIFA = document.getElementById("jiraInputIFA");
+            let valueIFA = elemIFA.value;
+            if (valueIFA) {
+              window
+                .open(
+                  "https://utec.atlassian.net/browse/IFA-" + valueIFA,
+                  "_blank"
+                )
+                .focus();
+              elemIFA.value = "";
             }
-            let id = event.target.id;
-            switch (id) {
-                case "adminTest":
-                    window.open('https://test-admin.utecstage.com/', '_blank').focus();
-                    break;
-                case "adminStage":
-                    window.open('https://admin.utecstage.com/', '_blank').focus();
-                    break;
-                case "adminPreprod":
-                    window.open('https://admin-preprod.utecstage.com/', '_blank').focus();
-                    break;
-                case "adminProd":
-                    window.open('https://admin.utecbuild.com/', '_blank').focus();
-                    break;
-                case "polarisTest":
-                    window.open('https://d1e6yiez0hqgz1.cloudfront.net/', '_blank').focus();
-                    break;
-                case "polarisStage":
-                    window.open('https://onetechnical.utecstage.com/', '_blank').focus();
-                    break;
-                case "polarisPreprod":
-                    window.open('https://onetechnical-preprod.utecstage.com/', '_blank').focus();
-                    break;
-                case "polarisProd":
-                    window.open('https://onetechnical.utecbuild.com/', '_blank').focus();
-                    break;
-                case "CCPTest":
-                    window.open('https://d3hltqg7xurqp6.cloudfront.net/', '_blank').focus();
-                    break;
-                case "CCPStage":
-                    window.open('https://experience.utecstage.com/', '_blank').focus();
-                    break;
-                case "CCPPreprod":
-                    window.open('https://cx-preprod.utecstage.com/', '_blank').focus();
-                    break;
-                case "CCPProd":
-                    window.open('https://experience.utecbuild.com/', '_blank').focus();
-                    break;
-                case "BPDTest":
-                    // window.open('https://d3hltqg7xurqp6.cloudfront.net/', '_blank').focus();
-                    break;
-                case "BPDStage":
-                    window.open('https://bpdloyalty.utecstage.com/', '_blank').focus();
-                    break;
-                case "BPDPreprod":
-                    window.open('https://dfoh5qngxb25s.cloudfront.net/', '_blank').focus();
-                    break;
-                case "BPDProd":
-                    window.open('https://bpdloyalty.utecbuild.com/', '_blank').focus();
-                    break;
-                case "bitbucketAdmin":
-                    window.open('https://bitbucket.org/utecdev/admin-panel/src/master/', '_blank').focus();
-                    break;
-                case "bitbucketPolaris":
-                    window.open('https://bitbucket.org/utecdev/polaris/src/master/', '_blank').focus();
-                    break;
-                case "bitbucketCCP":
-                    window.open('https://bitbucket.org/utecdev/contact-center-panel/src/master/', '_blank').focus();
-                    break;
-                case "bitbucketBPD":
-                    window.open('https://bitbucket.org/utecdev/bpd-qrc-frontend/src/master/', '_blank').focus();
-                    break;
-                case "bitbucketMicroservices":
-                    window.open('https://bitbucket.org/utecdev/utec-microservices/src/master/', '_blank').focus();    
-                    break;
-                case "bitbucketPolarisBE":
-                    window.open('https://bitbucket.org/utecdev/polaris-backend/src/master/', '_blank').focus();    
-                    break;
-                case "bitbucketReferral":
-                    window.open('https://bitbucket.org/utecdev/referral-system/src/master/', '_blank').focus();    
-                    break;
-                case "bitbucketBpdBE":
-                    window.open('https://bitbucket.org/utecdev/bpd-qrc-backend/src/master/', '_blank').focus();    
-                    break;
-                         
-                case "jiraButtonIFA":
-                    let elemIFA = document.getElementById("jiraInputIFA");
-                    let valueIFA = elemIFA.value;
-                    if (valueIFA) {
-                        window.open('https://utec.atlassian.net/browse/IFA-' + valueIFA, '_blank').focus();
-                        elemIFA.value = "";
-                    }
-                    break;
-                case "jiraButtonUTS":
-                    let elemUTS = document.getElementById("jiraInputUTS");
-                    let valueUTS = elemUTS.value;
-                    if (valueUTS) {
-                        window.open('https://utec.atlassian.net/browse/UTS-' + valueUTS, '_blank').focus();
-                        elemUTS.value = "";
-                    }
-                    break;
-                case "jiraButtonEA":
-                    let elemEA = document.getElementById("jiraInputEA");
-                    let valueEA = elemEA.value;
-                    if (valueEA) {
-                        window.open('https://utec.atlassian.net/browse/EA-' + valueEA, '_blank').focus();
-                        valueEA.value = "";
-                    }
-                    break;
-
-                default:
-                    return;
+            break;
+          case "jiraButtonUTS":
+            let elemUTS = document.getElementById("jiraInputUTS");
+            let valueUTS = elemUTS.value;
+            if (valueUTS) {
+              window
+                .open(
+                  "https://utec.atlassian.net/browse/UTS-" + valueUTS,
+                  "_blank"
+                )
+                .focus();
+              elemUTS.value = "";
             }
-        })
-
-        wrapper.addEventListener('keypress', (event) => {
-            const isInput = event.target.nodeName === 'INPUT';
-            if (!isInput) { return; }
-            let id = event.target.id;
-            if (event.key === 'Enter') {
-                // code for enter
-                switch (id) {
-                    case "jiraInputIFA":
-                        let elemIFA = document.getElementById("jiraInputIFA");
-                        let valueIFA = elemIFA.value;
-                        if (valueIFA) {
-                            window.open('https://utec.atlassian.net/browse/IFA-' + valueIFA, '_blank').focus();
-                            elemIFA.value = "";
-                        }
-                        break;
-                    case "jiraInputUTS":
-                        let elemUTS = document.getElementById("jiraInputUTS");
-                        let valueUTS = elemUTS.value;
-                        if (valueUTS) {
-                            window.open('https://utec.atlassian.net/browse/UTS-' + valueUTS, '_blank').focus();
-                            elemUTS.value = "";
-                        }
-                        break;
-                    case "jiraInputEA":
-                        let elemEA = document.getElementById("jiraInputEA");
-                        let valueEA = elemEA.value;
-                        if (valueEA) {
-                            window.open('https://utec.atlassian.net/browse/EA-' + valueEA, '_blank').focus();
-                            valueEA.value = "";
-                        }
-                        break;
-
-                    default:
-                        return;
-                }
+            break;
+          case "jiraButtonEA":
+            let elemEA = document.getElementById("jiraInputEA");
+            let valueEA = elemEA.value;
+            if (valueEA) {
+              window
+                .open(
+                  "https://utec.atlassian.net/browse/EA-" + valueEA,
+                  "_blank"
+                )
+                .focus();
+              valueEA.value = "";
             }
+            break;
 
-        });
+          default:
+            return;
+        }
+      });
+
+      wrapper.addEventListener("keypress", (event) => {
+        const isInput = event.target.nodeName === "INPUT";
+        if (!isInput) {
+          return;
+        }
+        let id = event.target.id;
+        if (event.key === "Enter") {
+          // code for enter
+          switch (id) {
+            case "jiraInputIFA":
+              let elemIFA = document.getElementById("jiraInputIFA");
+              let valueIFA = elemIFA.value;
+              if (valueIFA) {
+                window
+                  .open(
+                    "https://utec.atlassian.net/browse/IFA-" + valueIFA,
+                    "_blank"
+                  )
+                  .focus();
+                elemIFA.value = "";
+              }
+              break;
+            case "jiraInputUTS":
+              let elemUTS = document.getElementById("jiraInputUTS");
+              let valueUTS = elemUTS.value;
+              if (valueUTS) {
+                window
+                  .open(
+                    "https://utec.atlassian.net/browse/UTS-" + valueUTS,
+                    "_blank"
+                  )
+                  .focus();
+                elemUTS.value = "";
+              }
+              break;
+            case "jiraInputEA":
+              let elemEA = document.getElementById("jiraInputEA");
+              let valueEA = elemEA.value;
+              if (valueEA) {
+                window
+                  .open(
+                    "https://utec.atlassian.net/browse/EA-" + valueEA,
+                    "_blank"
+                  )
+                  .focus();
+                valueEA.value = "";
+              }
+              break;
+
+            default:
+              return;
+          }
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
